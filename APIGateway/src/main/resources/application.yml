@@ -15,28 +15,3 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/api/v1/users/**
-  security:
-    oauth2:
-      client:
-        provider:
-          google:
-            issuer-uri: https://accounts.google.com
-        registration:
-          google:
-            client-id: 406289602052-gd8r1a2m72etottbclo0sap6v950l0uq.apps.googleusercontent.com
-            client-secret: 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
-            authorization-grant-type: authorization_code
-            redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
-            scope:
-              - openid
-              - email
-              - profile
-          github:
-            client-id: Ov23liE0q3u17L5DCdLu
-            client-secret: b2fce3fef9cd4e64711cc6440a806524c824ca4a
-            authorization-grant-type: authorization_code
-            redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
-            scope:
-              - user:email
-              - read:user
-

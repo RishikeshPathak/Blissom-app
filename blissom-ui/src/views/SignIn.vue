@@ -97,7 +97,7 @@ export default {
     async handleSignIn() {
       this.loading = true;
       try {
-        const response = await axios.post('http://rishi:8081/login', {
+        const response = await axios.get('http://rishi:8081/login', {
           email: this.email,
           password: this.password,
         }, {
