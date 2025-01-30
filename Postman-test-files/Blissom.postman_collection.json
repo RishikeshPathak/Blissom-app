@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "15f87c7b-8704-4126-9fa1-803b79ba77a3",
+		"name": "Blissom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11204744"
+	},
+	"item": [
+		{
+			"name": "UserService",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "8668423a-41d5-4f5d-bbd5-0485f7e7a7e4"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"john_doe_2025\",\r\n  \"firstName\": \"John1Rishi\",\r\n  \"lastName\": \"DoPathake\",\r\n  \"email\": \"john21.doe@example.com\",\r\n  \"dateOfBirth\": \"1990-05-15T00:00:00\",\r\n  \"mobileNumber\": \"+1234567893\",\r\n  \"accountStatus\": \"ACTIVE\",\r\n  \"password\": \"hashed_password_string\",\r\n  \"salt\": \"random_salt_string\",\r\n  \"gender\": \"Male\",\r\n  \"countryCode\": \"US\",\r\n  \"profilePictureSmall\": \"https://example.com/images/profile_small.jpg\",\r\n  \"maritalStatus\": \"Single\",\r\n  \"nationality\": \"American\",\r\n  \"occupation\": \"Software Engineer\",\r\n  \"aboutMe\": \"A tech enthusiast with a passion for innovation.\",\r\n  \"deleted\": false,\r\n  \"twoFactorEnabled\": true,\r\n  \"accountLocked\": false,\r\n  \"suspensionReason\": null,\r\n  \"referralCode\": \"REFCODE123\",\r\n  \"usedReferralCode\": \"REFCODE456\",\r\n  \"profilePicture\": \"https://example.com/images/profile.jpg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/api/v1/users"
+					},
+					"response": []
+				},
+				{
+					"name": "add loyalty points",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"john_doe_2025\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"dateOfBirth\": \"1990-05-15T00:00:00\",\r\n  \"mobileNumber\": \"+1234567890\",\r\n  \"accountStatus\": \"ACTIVE\",\r\n  \"password\": \"hashed_password_string\",\r\n  \"salt\": \"random_salt_string\",\r\n  \"gender\": \"Male\",\r\n  \"countryCode\": \"US\",\r\n  \"profilePictureSmall\": \"https://example.com/images/profile_small.jpg\",\r\n  \"maritalStatus\": \"Single\",\r\n  \"nationality\": \"American\",\r\n  \"occupation\": \"Software Engineer\",\r\n  \"aboutMe\": \"A tech enthusiast with a passion for innovation.\",\r\n  \"deleted\": false,\r\n  \"twoFactorEnabled\": true,\r\n  \"accountLocked\": false,\r\n  \"suspensionReason\": null,\r\n  \"referralCode\": \"REFCODE123\",\r\n  \"usedReferralCode\": \"REFCODE456\",\r\n  \"profilePicture\": \"https://example.com/images/profile.jpg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users/951883d1-7b47-4d10-ba58-cb50b7da3117/loyalty/add?points=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"951883d1-7b47-4d10-ba58-cb50b7da3117",
+								"loyalty",
+								"add"
+							],
+							"query": [
+								{
+									"key": "points",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deduct loyalty points",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"john_doe_2025\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"dateOfBirth\": \"1990-05-15T00:00:00\",\r\n  \"mobileNumber\": \"+1234567890\",\r\n  \"accountStatus\": \"ACTIVE\",\r\n  \"password\": \"hashed_password_string\",\r\n  \"salt\": \"random_salt_string\",\r\n  \"gender\": \"Male\",\r\n  \"countryCode\": \"US\",\r\n  \"profilePictureSmall\": \"https://example.com/images/profile_small.jpg\",\r\n  \"maritalStatus\": \"Single\",\r\n  \"nationality\": \"American\",\r\n  \"occupation\": \"Software Engineer\",\r\n  \"aboutMe\": \"A tech enthusiast with a passion for innovation.\",\r\n  \"deleted\": false,\r\n  \"twoFactorEnabled\": true,\r\n  \"accountLocked\": false,\r\n  \"suspensionReason\": null,\r\n  \"referralCode\": \"REFCODE123\",\r\n  \"usedReferralCode\": \"REFCODE456\",\r\n  \"profilePicture\": \"https://example.com/images/profile.jpg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users/4942e907-d259-4cd8-9494-709eec706dfe/loyalty/deduct?points=90",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"4942e907-d259-4cd8-9494-709eec706dfe",
+								"loyalty",
+								"deduct"
+							],
+							"query": [
+								{
+									"key": "points",
+									"value": "90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get loyalty points",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"john_doe_2025\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"dateOfBirth\": \"1990-05-15T00:00:00\",\r\n  \"mobileNumber\": \"+1234567890\",\r\n  \"accountStatus\": \"ACTIVE\",\r\n  \"password\": \"hashed_password_string\",\r\n  \"salt\": \"random_salt_string\",\r\n  \"gender\": \"Male\",\r\n  \"countryCode\": \"US\",\r\n  \"profilePictureSmall\": \"https://example.com/images/profile_small.jpg\",\r\n  \"maritalStatus\": \"Single\",\r\n  \"nationality\": \"American\",\r\n  \"occupation\": \"Software Engineer\",\r\n  \"aboutMe\": \"A tech enthusiast with a passion for innovation.\",\r\n  \"deleted\": false,\r\n  \"twoFactorEnabled\": true,\r\n  \"accountLocked\": false,\r\n  \"suspensionReason\": null,\r\n  \"referralCode\": \"REFCODE123\",\r\n  \"usedReferralCode\": \"REFCODE456\",\r\n  \"profilePicture\": \"https://example.com/images/profile.jpg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/api/v1/users/4942e907-d259-4cd8-9494-709eec706dfe/loyalty"
+					},
+					"response": []
+				},
+				{
+					"name": "add user address",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"street\": \"123 Main Street\",\r\n  \"city\": \"Springfield\",\r\n  \"state\": \"Illinois\",\r\n  \"country\": \"United States\",\r\n  \"zipCode\": \"62704\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/api/v1/users/951883d1-7b47-4d10-ba58-cb50b7da3117/addresses"
+					},
+					"response": []
+				},
+				{
+					"name": "get user address",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/api/v1/users/9fcc984c-f45e-4456-b0d8-249acb2d87ab/addresses"
+					},
+					"response": []
+				},
+				{
+					"name": "update single user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"john_doe_2025\",\r\n  \"firstName\": \"Johny\",\r\n  \"lastName\": \"Doe\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"dateOfBirth\": \"1990-05-15T00:00:00\",\r\n  \"mobileNumber\": \"+1234567890\",\r\n  \"accountStatus\": \"ACTIVE\",\r\n  \"password\": \"hashed_password_string\",\r\n  \"salt\": \"random_salt_string\",\r\n  \"gender\": \"Male\",\r\n  \"countryCode\": \"US\",\r\n  \"profilePictureSmall\": \"https://example.com/images/profile_small.jpg\",\r\n  \"maritalStatus\": \"Single\",\r\n  \"nationality\": \"American\",\r\n  \"occupation\": \"Senior Software Engineer\",\r\n  \"aboutMe\": \"A tech enthusiast with a passion for innovation.\",\r\n  \"deleted\": false,\r\n  \"twoFactorEnabled\": true,\r\n  \"accountLocked\": false,\r\n  \"suspensionReason\": null,\r\n  \"referralCode\": \"REFCODE123\",\r\n  \"usedReferralCode\": \"REFCODE456\",\r\n  \"profilePicture\": \"https://example.com/images/profile.jpg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/api/v1/users/9fcc984c-f45e-4456-b0d8-249acb2d87ab"
+					},
+					"response": []
+				},
+				{
+					"name": "update user address",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"street\": \"123 New Main Street\",\r\n  \"city\": \"Springfield\",\r\n  \"state\": \"Illinois\",\r\n  \"country\": \"United States\",\r\n  \"zipCode\": \"62704\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/api/v1/users/e39070b2-0280-47d3-88ea-aaf277d70d8b/addresses/a8662e6c-cfe6-4162-8b70-ecd51aef32f7"
+					},
+					"response": []
+				},
+				{
+					"name": "get single user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/api/v1/users/9fcc984c-f45e-4456-b0d8-249acb2d87ab"
+					},
+					"response": []
+				},
+				{
+					"name": "search users for keyword",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/users/search?keyword=American",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "American"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "8668423a-41d5-4f5d-bbd5-0485f7e7a7e4"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
